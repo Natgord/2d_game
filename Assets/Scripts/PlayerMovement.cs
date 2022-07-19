@@ -43,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
         checkMovement();
         checkJump();
         checkDashAbility();
+
+        GetComponent<TrailRenderer>().startColor = spriteRend.color;
     }
 
     private void checkMovement()

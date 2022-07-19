@@ -23,6 +23,12 @@ public class PlayerStatus : MonoBehaviour
     void Update()
     {
         updateColor();
+
+        if (lightUpEffect != null)
+        {
+            var forceOverLife = lightUpEffect.forceOverLifetime;
+            forceOverLife.x = Mathf.Abs(Input.GetAxis("Horizontal")) * -50f;
+        }
     }
 
     private void updateColor()
@@ -45,16 +51,13 @@ public class PlayerStatus : MonoBehaviour
             if (lightUpEffect == null)
             {
                 // Instantiate the effect and place it as a child of the player. Will follow player
-                lightUpEffect = Instantiate(LightUpPS, transform.position, Quaternion.identity);
+                lightUpEffect = Instantiate(LightUpPS, transform.position, transform.rotation);
                 lightUpEffect.transform.parent = gameObject.transform;
             }
+            return;
         }
-        // If the player does not gain or loose color
-        else
-        {
-            // Destroy the gain effect
-            Destroy(lightUpEffect);
-        }
+
+        Destroy(lightUpEffect);
     }
 
     private Color LimitColorValue(Color colorToLimit)
@@ -114,6 +117,22 @@ public class PlayerStatus : MonoBehaviour
         {
             // The Player will not loose or gain color
             touchColor = new Color(0f, 0f, 0f, 1f);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        // Get the name of the collided object
+        string name = collision.gameObject.name;
+
+        // Get first two letters in string
+        string firstLetters = "" + name[0] + name[1];
+
+        // If it's a "C"olor which the player will "G"ain
+        if (firstLetters == "CG" || firstLetters == "CL")
+        {
+            // Get the color of the collided object
+            touchColor = Color.black;
         }
     }
 }
