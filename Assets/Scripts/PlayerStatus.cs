@@ -9,9 +9,9 @@ public class PlayerStatus : MonoBehaviour
 
     private ParticleSystem lightUpEffect;
 
-    private Transform centerBoddyPlayer;
+    private float fadeSpeed = 0.001f;
 
-    private int fadeSpeed = 230;
+    Color touchColor;
 
     // Start is called before the first frame update
     void Start()
@@ -20,52 +20,100 @@ public class PlayerStatus : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
+        updateColor();
+    }
 
+    private void updateColor()
+    {
+        // Set the new color the same as the current color of the player
+        Color newColor = spriteRend.color;
+
+        // Compute the new color
+        newColor = spriteRend.color + touchColor;
+        newColor.a = 1f;
+        newColor = LimitColorValue(newColor);
+
+        // Update color
+        spriteRend.color = Color.Lerp(spriteRend.color, newColor, fadeSpeed);
+
+        // If the player gain colors
+        if (touchColor.r > 0f || touchColor.g > 0f || touchColor.b > 0f)
+        {
+            // Create regeneration of colors effect is it's not created yet
+            if (lightUpEffect == null)
+            {
+                // Instantiate the effect and place it as a child of the player. Will follow player
+                lightUpEffect = Instantiate(LightUpPS, transform.position, Quaternion.identity);
+                lightUpEffect.transform.parent = gameObject.transform;
+            }
+        }
+        // If the player does not gain or loose color
+        else
+        {
+            // Destroy the gain effect
+            Destroy(lightUpEffect);
+        }
+    }
+
+    private Color LimitColorValue(Color colorToLimit)
+    {
+        // Store Red Green and Blue in array
+        float[] rgb = { colorToLimit.r, colorToLimit.g, colorToLimit.b };
+
+        // Loop in red, green and blue
+        for (int rgbIndex = 0; rgbIndex < rgb.Length; rgbIndex++)
+        {
+            // If it`s higher than one
+            if (rgb[rgbIndex] > 1f)
+            {
+                // Set the limit
+                rgb[rgbIndex] = 1f;
+            }
+            // If it`s lower than 0
+            else if (rgb[rgbIndex] < 0f)
+            {
+                // Set the limit
+                rgb[rgbIndex] = 0f;
+            }
+        }
+
+        // Get the limited color
+        Color r_limitedColor = Color.white;
+        r_limitedColor.r = rgb[0];
+        r_limitedColor.g = rgb[1];
+        r_limitedColor.b = rgb[2];
+        return r_limitedColor;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        // Get the name of the collided object
         string name = collision.gameObject.name;
 
-        char firstLetter = name[0];
-        char secondLetter = name[1];
+        // Get the current color of the player
+        Color currentColor = gameObject.GetComponent<SpriteRenderer>().color;
 
-        if (firstLetter == 'C')
+        // Get first two letters in string
+        string firstLetters = "" + name[0] + name[1];
+
+        // If it's a "C"olor which the player will "G"ain
+        if (firstLetters == "CG")
         {
-            if (secondLetter == 'G')
-            {
-                Color currentColor = gameObject.GetComponent<SpriteRenderer>().color;
-                Color nextColor = currentColor + collision.gameObject.GetComponent<SpriteRenderer>().color / 2f;
-
-                spriteRend.color = nextColor;
-                if (lightUpEffect == null)
-                {
-                    lightUpEffect = Instantiate(LightUpPS, transform.position, Quaternion.identity);
-                    lightUpEffect.transform.parent = gameObject.transform;
-                }
-            }
-            else if (secondLetter == 'L')
-            {
-                Color currentColor = gameObject.GetComponent<SpriteRenderer>().color;
-                Color nextColor = currentColor - collision.gameObject.GetComponent<SpriteRenderer>().color / 2f;
-                nextColor += new Color(0f, 0f, 0f, 1f);
-                spriteRend.color = nextColor;
-            }
+            // Get the color of the collided object
+            touchColor = collision.gameObject.GetComponent<SpriteRenderer>().color;
         }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        string name = collision.gameObject.name;
-
-        char firstLetter = name[0];
-        char secondLetter = name[1];
-
-        if (secondLetter == 'G')
+        // If it's a "C"olor which the player will "L"oose
+        else if (firstLetters == "CL")
         {
-            Destroy(lightUpEffect);
-        }     
+            // Get the color of the collided object
+            touchColor = collision.gameObject.GetComponent<SpriteRenderer>().color * -1f;
+        }
+        else
+        {
+            // The Player will not loose or gain color
+            touchColor = new Color(0f, 0f, 0f, 1f);
+        }
     }
 }

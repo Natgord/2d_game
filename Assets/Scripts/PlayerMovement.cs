@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Global classes
     Rigidbody2D rb;
+    SpriteRenderer spriteRend;
     public ParticleSystem dashEffect;
 
     // Global public variables
@@ -30,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     {
         // Attach classes to components/objects
         rb = GetComponent<Rigidbody2D>();
+        spriteRend = GetComponent<SpriteRenderer>();
+
         xSize = transform.localScale.x;
 
     }
@@ -46,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // Get A or D inputs
         // TODO : add controller inputs
-        float horizontalInput = Input.GetAxis("Horizontal"); // Can be -1, 0 or 1
+        float horizontalInput = Input.GetAxis("Horizontal");
 
         if (horizontalInput < 0)
         {
@@ -98,7 +101,8 @@ public class PlayerMovement : MonoBehaviour
 
             if (isDashing)
             {
-                Instantiate(dashEffect, transform.position, Quaternion.identity);
+                ParticleSystem dashPS = Instantiate(dashEffect, transform.position, Quaternion.identity);
+                dashPS.startColor = spriteRend.color;
                 rb.velocity = dashDirection * dashForce;
                 currentDashTimer -= Time.deltaTime;
                 if (currentDashTimer <= 0)
