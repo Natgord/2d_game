@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer spriteRend;
     public ParticleSystem dashEffect;
+    private Animator facialAnimator;
 
     // Global public variables
     public float movementSpeed = 6f;
@@ -32,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         // Attach classes to components/objects
         rb = GetComponent<Rigidbody2D>();
         spriteRend = GetComponent<SpriteRenderer>();
+        facialAnimator = GameObject.Find("Facial").GetComponent<Animator>();
 
         xSize = transform.localScale.x;
 
@@ -56,10 +59,18 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalInput < 0)
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
+            // Set run animation
+            facialAnimator.SetBool("isMoving", true);
         }
         else if (horizontalInput > 0)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
+            // Set run animation
+            facialAnimator.SetBool("isMoving", true);
+        }
+        else
+        {
+            facialAnimator.SetBool("isMoving", false);
         }
 
         // Add force on Player on the X axis
