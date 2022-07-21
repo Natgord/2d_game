@@ -1,11 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
 {
+    const int MAX_COLOR_COUNT = 60;
+
     SpriteRenderer spriteRend;
-    public ParticleSystem LightUpPS;    
+    public ParticleSystem LightUpPS;
+    public UnityEngine.UI.Text redColor;
+    public UnityEngine.UI.Text greenColor;
+    public UnityEngine.UI.Text blueColor;
+
+    public Color[] colorBuffer;
+    int colorBufferIndex = 0;
+
 
     private ParticleSystem lightUpEffect;
 
@@ -16,7 +26,11 @@ public class PlayerStatus : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Assign classes
         spriteRend = GetComponent<SpriteRenderer>();
+
+        // Allocate memory for the buffer
+        colorBuffer = new Color[MAX_COLOR_COUNT];
     }
 
     // Update is called once per frame
@@ -28,6 +42,40 @@ public class PlayerStatus : MonoBehaviour
         {
             var forceOverLife = lightUpEffect.forceOverLifetime;
             forceOverLife.x = Mathf.Abs(Input.GetAxis("Horizontal")) * -50f;
+        }
+
+        // Update the UI
+        updateColorHealth();
+    }
+
+    private void setColorHealthTexts(Color color)
+    {
+        // Set all the color in the UI
+        redColor.text = "RED      " + Mathf.RoundToInt(color.r * 255);
+        greenColor.text = "GREEN  " + Mathf.RoundToInt(color.g * 255);
+        blueColor.text = "BLUE    " + Mathf.RoundToInt(color.b * 255);
+    }
+
+    private void updateColorHealth()
+    {
+        // Get the current color of the player
+        colorBuffer[colorBufferIndex++] = spriteRend.color;
+
+        // Check if counter reach max index
+        if (MAX_COLOR_COUNT <= colorBufferIndex)
+        {
+            // Reset buffer index
+            colorBufferIndex = 0;
+
+            // Compute mean of the buffer for each color
+            Color meanColor = Color.clear;
+            for (int index = 0; index < MAX_COLOR_COUNT; index++)
+            {
+                meanColor += colorBuffer[index] / MAX_COLOR_COUNT;
+            }
+
+            // Set the color texts UI
+            setColorHealthTexts(meanColor);
         }
     }
 
