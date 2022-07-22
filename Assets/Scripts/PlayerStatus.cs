@@ -9,6 +9,7 @@ public class PlayerStatus : MonoBehaviour
 
     SpriteRenderer spriteRend;
     public ParticleSystem LightUpPS;
+    public ParticleSystem DrainPS;
     public UnityEngine.UI.Text redColor;
     public UnityEngine.UI.Text greenColor;
     public UnityEngine.UI.Text blueColor;
@@ -18,6 +19,10 @@ public class PlayerStatus : MonoBehaviour
 
 
     private ParticleSystem lightUpEffect;
+    private ParticleSystem drainEffectDown;
+    private ParticleSystem drainEffectLeft;
+    private ParticleSystem drainEffectRight;
+    private ParticleSystem drainEffectUp;
 
     private float fadeSpeed = 0.001f;
 
@@ -149,6 +154,29 @@ public class PlayerStatus : MonoBehaviour
         // Get first two letters in string
         string firstLetters = "" + name[0] + name[1];
 
+        if (collision.gameObject.tag == "Ground")
+        {
+            if (drainEffectDown == null)
+            {
+                // Instantiate the effect and place it as a child of the player. Will follow player
+                drainEffectDown = Instantiate(DrainPS, transform.position + new Vector3(0f, -0.9f, 0f), transform.rotation);
+                drainEffectDown.transform.parent = gameObject.transform;
+            }
+        }
+        if (collision.gameObject.tag == "Wall")
+        {
+            if (drainEffectLeft == null)
+            {
+                // Instantiate the effect and place it as a child of the player. Will follow player
+                int flip = -1;
+                if (spriteRend.flipX == true)
+                    flip = 1;
+                drainEffectLeft = Instantiate(DrainPS, transform.position + new Vector3(0.9f* flip, 0.0f, 0f), transform.rotation);
+                drainEffectLeft.transform.Rotate(new Vector3(0f, 0f, 90f * flip));
+                drainEffectLeft.transform.parent = gameObject.transform;
+            }
+        }
+
         // If it's a "C"olor which the player will "G"ain
         if (firstLetters == "CG")
         {
@@ -176,6 +204,20 @@ public class PlayerStatus : MonoBehaviour
         // Get first two letters in string
         string firstLetters = "" + name[0] + name[1];
 
+        if (collision.gameObject.tag == "Ground")
+        {
+            if (drainEffectDown != null)
+            {
+                Destroy(drainEffectDown);
+            }
+        }
+        else if (collision.gameObject.tag == "Wall")
+        {
+            if (drainEffectLeft != null)
+            {
+                Destroy(drainEffectLeft);
+            }
+        }
         // If it's a "C"olor which the player will "G"ain
         if (firstLetters == "CG" || firstLetters == "CL")
         {

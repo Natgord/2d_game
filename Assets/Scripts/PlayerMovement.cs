@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer spriteRend;
     public ParticleSystem dashEffect;
     private Animator facialAnimator;
+    public AudioSource mouvementSound;
 
     // Global public variables
     public float movementSpeed = 6f;
@@ -61,16 +62,26 @@ public class PlayerMovement : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 180, 0);
             // Set run animation
             facialAnimator.SetBool("isMoving", true);
+            if (mouvementSound.isPlaying != true)
+            {
+                mouvementSound.Play();
+            }
+            
         }
         else if (horizontalInput > 0)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
             // Set run animation
             facialAnimator.SetBool("isMoving", true);
+            if (mouvementSound.isPlaying != true)
+            {
+                mouvementSound.Play();
+            }
         }
         else
         {
             facialAnimator.SetBool("isMoving", false);
+            mouvementSound.Stop();
         }
 
         // Add force on Player on the X axis
