@@ -1,0 +1,528 @@
+fileFormatVersion: 2
+guid: 1d58a83e35c861e489c4677d19c604f3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2716586805076562400
+    second: Drawing-7.sketchpad_0
+  - first:
+      213: -2162245182500725522
+    second: Drawing-7.sketchpad_1
+  - first:
+      213: 6295179739018216713
+    second: Drawing-7.sketchpad_2
+  - first:
+      213: 2993842430479353935
+    second: Drawing-7.sketchpad_3
+  - first:
+      213: -5371853769734410524
+    second: Drawing-7.sketchpad_4
+  - first:
+      213: 2836994487534070862
+    second: Drawing-7.sketchpad_5
+  - first:
+      213: -1033278714543725062
+    second: Drawing-7.sketchpad_6
+  - first:
+      213: -1544238326865995640
+    second: Drawing-7.sketchpad_7
+  - first:
+      213: 5660805651162941191
+    second: Drawing-7.sketchpad_8
+  - first:
+      213: -1493441592261077633
+    second: Drawing-7.sketchpad_9
+  - first:
+      213: 2568403469124924389
+    second: Drawing-7.sketchpad_10
+  - first:
+      213: 3505787453537432572
+    second: Drawing-7.sketchpad_11
+  - first:
+      213: -4434921535593213211
+    second: Drawing-7.sketchpad_12
+  - first:
+      213: 2591433630199424890
+    second: Drawing-7.sketchpad_13
+  - first:
+      213: -4543587958125383916
+    second: Drawing-7.sketchpad_14
+  - first:
+      213: 698310210573270627
+    second: Drawing-7.sketchpad_15
+  - first:
+      213: 5525788476216945419
+    second: Drawing-7.sketchpad_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 679
+        width: 231
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ee5e1a1bebc4ad0800000000000000
+      internalID: -2716586805076562400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_1
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 676
+        width: 230
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec9ebb66792ef1e0800000000000000
+      internalID: -2162245182500725522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_2
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 680
+        width: 231
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905ca6d8e98fc5750800000000000000
+      internalID: 6295179739018216713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_3
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 684
+        width: 231
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48c63614d34c8920800000000000000
+      internalID: 2993842430479353935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_4
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 685
+        width: 231
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee23ad25775375b0800000000000000
+      internalID: -5371853769734410524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 473
+        width: 230
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ca53394770f5720800000000000000
+      internalID: 2836994487534070862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_6
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 470
+        width: 226
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af526a1db7e09a1f0800000000000000
+      internalID: -1033278714543725062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_7
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 482
+        width: 191
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 888db966c63c19ae0800000000000000
+      internalID: -1544238326865995640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_8
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 464
+        width: 162
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707471c5fb83f8e40800000000000000
+      internalID: 5660805651162941191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_9
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 454
+        width: 148
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f751c70d8ca364be0800000000000000
+      internalID: -1493441592261077633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_10
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 163
+        width: 131
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e37211e85dc4a320800000000000000
+      internalID: 2568403469124924389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_11
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 150
+        width: 117
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3be125d1f07a030800000000000000
+      internalID: 3505787453537432572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_12
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 148
+        width: 106
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e29c305c5ef372c0800000000000000
+      internalID: -4434921535593213211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_13
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 151
+        width: 117
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77a90b182f96f320800000000000000
+      internalID: 2591433630199424890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_14
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 164
+        width: 145
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fa13633dee1f0c0800000000000000
+      internalID: -4543587958125383916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_15
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 170
+        width: 199
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e7f3ccf65e0b900800000000000000
+      internalID: 698310210573270627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drawing-7.sketchpad_16
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 183
+        width: 228
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0babdc975b8fac40800000000000000
+      internalID: 5525788476216945419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
