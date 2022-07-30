@@ -143,6 +143,11 @@ public class PlayerStatus : MonoBehaviour
         return r_limitedColor;
     }
 
+    public void GainColor(Color colorToAdd)
+    {
+        spriteRend.color += colorToAdd;
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         // Get the name of the collided object

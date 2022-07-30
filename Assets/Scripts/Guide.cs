@@ -7,17 +7,27 @@ public class Guide : MonoBehaviour
 {
 
     public Text whatToDoText;
+    private SpeakUI dialogWindow;
+    public GameObject speakUI;
+    public bool isInDialog = false;
+
+    bool canDialog = false;
 
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
     void Update()
     {
         lookAtPlayer();
+        if (canDialog && Input.GetButtonDown("ShortAttack"))
+        {
+            GameObject speak = Instantiate(speakUI, transform.position, Quaternion.identity);
+            dialogWindow = speak.GetComponent<SpeakUI>();
+            dialogWindow.StartDialog(gameObject);
+        }
     }
 
     void lookAtPlayer()
@@ -44,6 +54,7 @@ public class Guide : MonoBehaviour
         {
             whatToDoText.enabled = true;
             whatToDoText.text = "Press B to interact with the Guide";
+            canDialog = true;
         }
     }
 
@@ -56,6 +67,7 @@ public class Guide : MonoBehaviour
         {
             whatToDoText.text = "";
             whatToDoText.enabled = false;
+            canDialog = false;
         }
     }
 }
