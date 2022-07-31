@@ -89,6 +89,7 @@ public class PlayerAttack : MonoBehaviour
             firedProjectile.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 500f);
         }
 
+        firedProjectile.GetComponent<SpriteRenderer>().color = GetComponent<SpriteRenderer>().color;
         // Ignore the collisions with the player
         Physics2D.IgnoreCollision(firedProjectile.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }

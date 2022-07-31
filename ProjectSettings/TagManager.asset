@@ -11,6 +11,8 @@ TagManager:
   - Projectil
   - Portal_Slave
   - Portal_Master
+  - Enemey
+  - ShortAttack
   layers:
   - Default
   - TransparentFX

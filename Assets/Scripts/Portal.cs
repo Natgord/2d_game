@@ -11,10 +11,19 @@ public class Portal : MonoBehaviour
     private Transform player_destination;
     private Collider2D m_collision;
 
+    private WaveController waveController;
+
     private void Start()
     {
+        waveController = GameObject.Find("WaveController").GetComponent<WaveController>();
         CheckPriority();
         CheckDestination();
+    }
+
+    // Add for texting, we can delete it after
+    private void Update()
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = GameObject.Find("Player").GetComponent<SpriteRenderer>().color;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -62,6 +71,16 @@ public class Portal : MonoBehaviour
         if (Vector2.Distance(transform.position, m_collision.transform.position) > distance)
         {
             m_collision.transform.position = new Vector2(player_destination.position.x, player_destination.position.y);
+
+            // For tests purpose
+            if (gameObject.name == "PortalToWave")
+            {
+                waveController.StartWave();
+            }
+            else if (gameObject.name == "PortalToTown")
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
