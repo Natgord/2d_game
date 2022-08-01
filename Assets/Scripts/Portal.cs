@@ -79,7 +79,7 @@ public class Portal : MonoBehaviour
             }
             else if (gameObject.name == "PortalToTown")
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }
     }

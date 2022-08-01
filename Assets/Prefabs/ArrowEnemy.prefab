@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 12627589773475302}
   - component: {fileID: 8707302056333788668}
   - component: {fileID: 2729762092261259135}
+  - component: {fileID: 6224427290212728196}
   m_Layer: 0
   m_Name: ArrowEnemy
   m_TagString: Enemey
@@ -208,8 +209,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  speed: 0.01
+  speed: 1
   followXPlayer: 0
   followXYPlayer: 1
   followXYPlayerWithDelay: 0
   followDelay: 0
+--- !u!50 &6224427290212728196
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8648236337311725068}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

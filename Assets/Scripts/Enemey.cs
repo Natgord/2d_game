@@ -31,12 +31,16 @@ public class Enemey : MonoBehaviour
 
         if (followXYPlayer)
         {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.transform.position.x, player.transform.position.y), speed);
+            //transform.LookAt(player.transform);
+            Vector3 targetDirection = (player.transform.position - transform.position).normalized;
+            GetComponent<Rigidbody2D>().AddForce(targetDirection * speed);
         }
 
         if (followXPlayer)
         {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.transform.position.x, transform.position.y), speed);
+            //transform.LookAt(player.transform);
+            Vector3 targetDirection = (player.transform.position - transform.position).normalized;
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(targetDirection.x, 0f) * speed);
         }
     }
 
