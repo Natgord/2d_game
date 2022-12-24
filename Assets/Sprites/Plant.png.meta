@@ -57,7 +57,7 @@ TextureImporter:
       213: -1510010400786962725
     second: Drawing-4.sketchpad (1)_17
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -78,6 +78,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -116,6 +117,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -143,6 +145,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -544,6 +558,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Drawing-4.sketchpad (1)_4: 317664441072697339
+      Drawing-4.sketchpad (1)_9: 6457822578443037113
+      Drawing-4.sketchpad (1)_13: -2514780699493056883
+      Drawing-4.sketchpad (1)_1: 2632965100348506334
+      Drawing-4.sketchpad (1)_2: -7866911185842869822
+      Drawing-4.sketchpad (1)_8: -6700789396275787354
+      Drawing-4.sketchpad (1)_0: -5891411883188094217
+      Drawing-4.sketchpad (1)_14: 5970981640643849749
+      Drawing-4.sketchpad (1)_17: -1510010400786962725
+      Drawing-4.sketchpad (1)_11: -3279734375698556153
+      Drawing-4.sketchpad (1)_5: 4613440732563092124
+      Drawing-4.sketchpad (1)_7: 8791757327814543706
+      Drawing-4.sketchpad (1)_16: -2437168643936199095
+      Drawing-4.sketchpad (1)_3: 3759020985898453986
+      Drawing-4.sketchpad (1)_12: 2177139799120538158
+      Drawing-4.sketchpad (1)_6: 2227814041215934840
+      Drawing-4.sketchpad (1)_15: -4827778410710089023
+      Drawing-4.sketchpad (1)_10: -8320501053299691483
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

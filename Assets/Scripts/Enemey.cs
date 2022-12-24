@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Enemey : MonoBehaviour
@@ -52,6 +53,14 @@ public class Enemey : MonoBehaviour
         }
 
         if (collision.gameObject.tag == "ShortAttack")
+        {
+            health -= 2;
+        }
+    }
+
+    private void OnParticleCollision(GameObject collision)
+    {
+        if ("Projectil" == collision.tag)
         {
             health -= 2;
         }
